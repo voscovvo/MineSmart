@@ -30,5 +30,5 @@ install:
   - ls bin/ -l
   - gem install dpl --pre
   - dpl releases --token $GITHUB_TOKEN_MineSmart --file "bin/minesmart001-0.01-armeabi-v7a-debug.apk" --tag_name "v.0.01"
-  - echo "TODO COMPILE 64bit. SKIP"
+  - echo "TODO COMPILE 64bit.. SKIP"
   - echo "OK"
