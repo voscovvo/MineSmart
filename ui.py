@@ -3,14 +3,23 @@
 import pygame
 import math
 
+import gameClass
 from commonSettings import *
 from commonFunctions import print_text
 from database_functions import db_get_players_scores, db_get_player_name, db_get_level_name
 
 
+def display_debug_info(sc, windowsize):
+
+    print_text(sc, "window size: "+str(windowsize), (0,0), font_size=20)
+
+    pass
+
+
 def active_player_selection():
 
     pass
+
 
 def draw_user_interface_layer(sc, coords):
     """Draw UI"""
@@ -53,9 +62,9 @@ def draw_keyboard_holder_0_9(sc, coords, mcoords, key_num_solution):
 
     mx, my = mcoords
 
-    kb_width = 70
-    kb_height = 70
-    kb_margin = 6
+    kb_width = 75
+    kb_height = 75
+    kb_margin = 10
 
     sx = coords[0]
     sy = coords[1]
@@ -72,7 +81,7 @@ def draw_keyboard_holder_0_9(sc, coords, mcoords, key_num_solution):
 
     pygame.draw.rect(kb0_9_surface, (0, 0, 0), kb0_9_surface_rect, 1)
 
-    kb_font_size = 50
+    kb_font_size = 100
     font = pygame.font.Font(None, kb_font_size)
 
     key = 0

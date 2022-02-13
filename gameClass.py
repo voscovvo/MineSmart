@@ -205,6 +205,10 @@ class GameClass:
             mx, my = self.mouse_x, self.mouse_y
             key_pressed_num = self.key_num
 
+            # Display Debug info in game messages layer
+            display_debug_info(self.game_round_messages, self.display.screen)
+
+
             # Display SCORE and WHO PLAYS and which LEVEL
             coords = (WIDTH / 2 - 290, 80)
             draw_current_score_player_level(self.game_round_surface, coords,

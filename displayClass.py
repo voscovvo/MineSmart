@@ -1,5 +1,6 @@
 import pygame
 from commonSettings import *
+from main import platform
 
 
 class DisplayInfo:
@@ -60,6 +61,13 @@ class DisplayInfo:
 
         self.CheckWindowSize()
         self.DisplayInitilized = 1
+
+        if platform()=="android":
+            path="/data/data/org.vosco.minesmart/file/app"
+        elif platform()=="linux":
+            path="./"
+        
+
 
     def GetScreen(self):
         return self.screen
